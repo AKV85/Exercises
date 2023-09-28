@@ -12,7 +12,7 @@ final class BinarySearchTreeTest extends TestCase
 {
     public function testHasProperties(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         self::assertClassHasAttribute('data', BinarySearchTree::class);
         self::assertClassHasAttribute('left', BinarySearchTree::class);
         self::assertClassHasAttribute('right', BinarySearchTree::class);
@@ -20,7 +20,7 @@ final class BinarySearchTreeTest extends TestCase
 
     public function testHasMethods(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         self::assertTrue(
             method_exists(BinarySearchTree::class, 'insert'),
             'Class does not have method insert'
@@ -33,7 +33,7 @@ final class BinarySearchTreeTest extends TestCase
 
     public function testCanInsert(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         $node = new BinarySearchTree(10);
 
         $node->insert(5);
@@ -47,7 +47,7 @@ final class BinarySearchTreeTest extends TestCase
 
     public function testContains(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         $node = new BinarySearchTree(10);
 
         $node->insert(5);
@@ -73,7 +73,7 @@ final class BinarySearchTreeTest extends TestCase
      */
     public function testDepthFirstInOrder(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         $node = new BinarySearchTree(10);
 
         $node->insert(5);
@@ -97,7 +97,7 @@ final class BinarySearchTreeTest extends TestCase
      */
     public function testDepthFirstPostOrder(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         $node = new BinarySearchTree(10);
 
         $node->insert(5);
@@ -121,7 +121,7 @@ final class BinarySearchTreeTest extends TestCase
      */
     public function testDepthFirstPreOrder(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         $node = new BinarySearchTree(10);
 
         $node->insert(5);
