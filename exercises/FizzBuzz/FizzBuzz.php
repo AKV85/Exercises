@@ -15,4 +15,18 @@ namespace Exercises\FizzBuzz;
  */
 final class FizzBuzz
 {
+    static function print(int $limit)
+    {
+        for ($i = 1; $i <= $limit; $i++) {
+            if ($i % 3 === 0 && $i % 5 === 0) {
+                echo "fizzbuzz";
+            } elseif ($i % 3 === 0) {
+                echo 'fizz';
+            } elseif ($i % 5 === 0) {
+                echo 'buzz';
+            } else {
+                echo $i;
+            }
+        }
+    }
 }
