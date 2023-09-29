@@ -10,7 +10,10 @@
     processIsolation="false"
     stopOnFailure="false"
     printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
+
 >
+        <ini name="display_errors" value="On" />
+
   <testsuites>
     <testsuite name="Tests">
       <directory suffix="Test.php">./tests</directory>

@@ -13,16 +13,14 @@ namespace Exercises\Capitalize;
  */
 final class Capitalize
 {
-    // static function get(string $string){
-    //    return ucwords($string);
-    // }
-
+    static function get(string $string){
+       return ucwords($string);
+    }
 
     //find all words in string(transform to array)
     //replace first letter in each word to Upper
     //transform back to string
-
-    public static function get(string $string): string
+    public static function get1(string $string): string
 {
     $words = preg_split('/\s+/', $string);
 

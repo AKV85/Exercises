@@ -2,18 +2,18 @@
 
 namespace Tests\TextOperations;
 
-use Exercises\TextOperations\NewSentenceCapitalLetters;
+use Exercises\TextOperations\TextOperationsService;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-class CapitalizeSentencesTest extends TestCase
+class TextOperationsServiceTest extends TestCase
 {
 
     public function testHasGet(): void
     {
         // self::markTestSkipped();
         self::assertTrue(
-            method_exists(NewSentenceCapitalLetters::class, 'capitalizeSentences'),
+            method_exists(TextOperationsService::class, 'capitalizeSentences'),
             'Class does not have static method get'
         );
     }
@@ -23,7 +23,7 @@ class CapitalizeSentencesTest extends TestCase
         $inputText = "first sentence. second sentence. third sentence";
         $expectedOutput = "First sentence. Second sentence. Third sentence";
 
-        $outputText = NewSentenceCapitalLetters::capitalizeSentences($inputText);
+        $outputText = TextOperationsService::capitalizeSentences($inputText);
 
         $this->assertSame($expectedOutput, $outputText);
     }
@@ -33,7 +33,7 @@ class CapitalizeSentencesTest extends TestCase
         $inputText = "This   is    a    test.  It's working!  Isn't it?";
         $expectedOutput = "This is a test. It's working! Isn't it?";
 
-        $outputText = NewSentenceCapitalLetters::removeExtraSpaces($inputText);
+        $outputText = TextOperationsService::removeExtraSpaces($inputText);
 
         $this->assertSame($expectedOutput, $outputText);
     }
@@ -43,7 +43,7 @@ class CapitalizeSentencesTest extends TestCase
         $inputText = "   this is a test.  it's working!isn't it?";
         $expectedOutput = "This is a test. It's working! Isn't it?";
 
-        $outputText = NewSentenceCapitalLetters::formatText($inputText);
+        $outputText = TextOperationsService::formatText($inputText);
 
         $this->assertSame($expectedOutput, $outputText);
     }

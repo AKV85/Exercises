@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Exercises\TextOperations;
 
-final class NewSentenceCapitalLetters
+final class TextOperationsService
 {
     static function capitalizeSentences(string $inputText): string
     {
@@ -50,15 +50,3 @@ final class NewSentenceCapitalLetters
         return $formattedText;
     }
 }
-
-// $inputText = "first sentence. second sentence. thitd sentence";
-// $outputText = capitalizeSentences($inputText);
-// echo $outputText . PHP_EOL;
-
-// $inputText = "это предложение.      это      второе       предложение.еще одно предложение.";
-// $outputText = formatText($inputText);
-// echo $outputText . PHP_EOL;
-
-// $inputText = "This   is    a    test.  It's working!  Isn't it?";
-// $outputText = removeExtraSpaces($inputText);
-// echo $outputText . PHP_EOL;
