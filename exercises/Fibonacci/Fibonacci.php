@@ -74,7 +74,7 @@ final class Fibonacci
     }
 }
 
-$sizes = [10, 35];
+$sizes = [10, 20];
 
 foreach ($sizes as $size) {
     echo "Testing for Fibonacci number at index $size:\n";
