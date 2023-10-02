@@ -106,26 +106,26 @@ final class Search
 $numbers = range(1, 1000000);
 $n = 1000000;
 
-$startTimeGet = microtime(true);
+$startTimeLinear = microtime(true);
 Search::linear($numbers, $n);
-$endTimeGet = microtime(true);
-$executionTimeGet = $endTimeGet - $startTimeGet; //0.13  ($n=1000000)
-echo "Execution time for the linear method: $executionTimeGet seconds\n";
+$endTimeLinear = microtime(true);
+$executionTimeLinear = $endTimeLinear - $startTimeLinear; //0.13  ($n=1000000)
+echo "Execution time for the linear method: $executionTimeLinear seconds\n";
 
-$startTimeGet1 = microtime(true);
+$startTimeLinear1 = microtime(true);
 Search::linear1($numbers, $n);
-$endTimeGet1 = microtime(true);
-$executionTimeGet1 = $endTimeGet1 - $startTimeGet1; //0.02  ($n=1000000) linear winner
-echo "Execution time for the linear1 method: $executionTimeGet1 seconds\n";
+$endTimeLinear1 = microtime(true);
+$executionTimeLinear1 = $endTimeLinear1 - $startTimeLinear1; //0.02  ($n=1000000) linear winner
+echo "Execution time for the linear1 method: $executionTimeLinear1 seconds\n";
 
-$startTimeGet2 = microtime(true);
+$startTimeBinary = microtime(true);
 Search::binary($numbers, $n);
-$endTimeGet2 = microtime(true);
-$executionTimeGet2 = $endTimeGet2 - $startTimeGet2; //0.000012  ($n=1000000)
-echo "Execution time for the binary method: $executionTimeGet2 seconds\n";
+$endTimeBinary = microtime(true);
+$executionTimeBinary = $endTimeBinary - $startTimeBinary; //0.000012  ($n=1000000)
+echo "Execution time for the binary method: $executionTimeBinary seconds\n";
 
-$startTimeGet2 = microtime(true);
+$startTimeBinary1 = microtime(true);
 Search::binary1($numbers, $n);
-$endTimeGet2 = microtime(true);
-$executionTimeGet2 = $endTimeGet2 - $startTimeGet2; //0.000006  ($n=1000000) binary winner
-echo "Execution time for the binary1 method: $executionTimeGet2 seconds\n";
+$endTimeBinary1 = microtime(true);
+$executionTimeBinary1 = $endTimeBinary1 - $startTimeBinary1; //0.000006  ($n=1000000) binary winner
+echo "Execution time for the binary1 method: $executionTimeBinary1 seconds\n";
