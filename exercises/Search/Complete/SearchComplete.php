@@ -66,4 +66,5 @@ final class SearchComplete
 
         return $counter;
     }
+
 }
