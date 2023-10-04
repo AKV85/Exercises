@@ -46,18 +46,26 @@ final class SortTest extends TestCase
             method_exists(Sort::class, 'merge'),
             'Class does not have method merge'
         );
-        // self::assertTrue(
-        //     method_exists(Sort::class, 'merger'),
-        //     'Class does not have method merger'
-        // );
-        // self::assertTrue(
-        //     method_exists(Sort::class, 'quick'),
-        //     'Class does not have method quick'
-        // );
-        // self::assertTrue(
-        //     method_exists(Sort::class, 'radix'),
-        //     'Class does not have method radix'
-        // );
+        self::assertTrue(
+            method_exists(Sort::class, 'merger'),
+            'Class does not have method merger'
+        );
+        self::assertTrue(
+            method_exists(Sort::class, 'quick'),
+            'Class does not have method quick'
+        );
+        self::assertTrue(
+            method_exists(Sort::class, 'quick1'),
+            'Class does not have method quick1'
+        );
+        self::assertTrue(
+            method_exists(Sort::class, 'quick2'),
+            'Class does not have method quick2'
+        );
+        self::assertTrue(
+            method_exists(Sort::class, 'radix'),
+            'Class does not have method radix'
+        );
     }
 
     public function testBubbleSort(): void
@@ -103,13 +111,31 @@ final class SortTest extends TestCase
 
     public function testQuickSort(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         self::assertSame($this->sorted, Sort::quick($this->input));
+    }
+
+    public function testQuick1Sort(): void
+    {
+        // self::markTestSkipped();
+        self::assertSame($this->sorted, Sort::quick1($this->input));
+    }
+
+    public function testQuick2Sort(): void
+    {
+        // self::markTestSkipped();
+        self::assertSame($this->sorted, Sort::quick2($this->input));
     }
 
     public function testRadixSort(): void
     {
-        self::markTestSkipped();
+        // self::markTestSkipped();
         self::assertSame([ 12, 23, 345, 2345, 5467, 9852 ], Sort::radix([23, 345, 5467, 12, 2345, 9852]));
+    }
+
+    public function testRadix1Sort(): void
+    {
+        // self::markTestSkipped();
+        self::assertSame([ 12, 23, 345, 2345, 5467, 9852 ], Sort::radix1([23, 345, 5467, 12, 2345, 9852]));
     }
 }
